@@ -35,12 +35,10 @@
   </section>
 
   <!-- News Section -->
-  <section class="bg-blue-900 text-white p-8">
-    <h2 class="text-2xl font-bold mb-4">Latest News</h2>
+  <section class="bg-gray-500 p-8">
+    <h2 class="text-2xl font-bold mb-4 text-white">Latest News</h2>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-      <div class="bg-white text-black p-4 rounded">News 1</div>
-      <div class="bg-white text-black p-4 rounded">News 2</div>
-      <div class="bg-white text-black p-4 rounded">News 3</div>
+      <PostCard v-for="(post, i) in store.sortedPosts" :key="i" :post="post" :is-compact="true" />
     </div>
   </section>
 
@@ -90,4 +88,10 @@
   </section>
 </template>
 
-<script setup lang="ts"></script>
+<script lang="ts" setup>
+import { useCmsStore } from '../stores/cms'
+import PostCard from '../components/PostCard.vue'
+
+const store = useCmsStore()
+store.fetchPosts(3)
+</script>
