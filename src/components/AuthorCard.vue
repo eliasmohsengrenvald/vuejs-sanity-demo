@@ -2,7 +2,7 @@
   <div class="bg-gray-800 rounded-lg p-4 text-center flex flex-col justify-between h-full">
     <div>
       <img
-        :src="CreateURL(author.avatar, 300, 300)"
+        :src="createURL(author.avatar, 300, 300)"
         class="inline-block rounded-full w-32 h-32 mb-4"
       />
       <h3 class="text-xl font-bold mb-4">{{ author.full_name }}</h3>
@@ -15,7 +15,7 @@
 </template>
 
 <script lang="ts" setup>
-import { CreateURL } from '../utils'
+import { createURL } from '../utils'
 
 defineProps({
   author: {

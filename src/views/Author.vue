@@ -2,7 +2,7 @@
   <section v-if="author" class="container mx-auto p-4 pt-32">
     <div class="flex items-center mb-4">
       <img
-        :src="CreateURL(author.avatar)"
+        :src="createURL(author.avatar)"
         alt="authors-image"
         class="inline-block rounded-full w-16 h-16 mr-4"
       />
@@ -24,7 +24,7 @@
 import { ref } from 'vue'
 import { useRoute } from 'vue-router'
 import sanity from '../sanity-client'
-import { CreateURL } from '../utils'
+import { createURL } from '../utils'
 import PostCard from '../components/PostCard.vue'
 
 const route = useRoute()

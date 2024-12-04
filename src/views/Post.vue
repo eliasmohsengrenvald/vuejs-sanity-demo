@@ -1,5 +1,5 @@
 <template>
-  <img :src="CreateURL(post.image)" class="app-banner w-full object-cover mb-8" />
+  <img :src="createURL(post.image)" class="app-banner w-full object-cover mb-8" />
   <section v-if="post" class="container mx-auto p-4">
     <button
       @click="$router.back()"
@@ -24,7 +24,7 @@
 
     <p class="text-gray-500 italic mb-8">{{ post.excerpt }}</p>
 
-    <p v-html="TextToHTML(post.content)" class="text-lg mb-8"></p>
+    <p v-html="textToHTML(post.content)" class="text-lg mb-8"></p>
 
     <router-link
       :to="`/author/${post.author._id}`"
@@ -32,7 +32,7 @@
       v-if="post.author"
     >
       <img
-        :src="CreateURL(post.author.avatar, 300, 300)"
+        :src="createURL(post.author.avatar, 300, 300)"
         class="inline-block rounded-full w-10 h-10 mr-4"
       />
 
@@ -47,7 +47,7 @@
 import { ref } from 'vue'
 import { useRoute } from 'vue-router'
 import sanity from '../sanity-client'
-import { CreateURL, TextToHTML } from '../utils'
+import { createURL, textToHTML } from '../utils'
 
 const route = useRoute()
 const id = ref(route.params.id)

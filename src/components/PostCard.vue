@@ -4,7 +4,7 @@
   >
     <img
       v-if="post.image"
-      :src="CreateURL(post.image, 480, 320)"
+      :src="createURL(post.image, 480, 320)"
       :class="[
         'block',
         'w-full',
@@ -26,12 +26,12 @@
         <div class="flex items-center sm:mb-4 md:mb-0">
           <img
             v-if="post.author.avatar"
-            :src="CreateURL(post.author.avatar, 300, 300)"
+            :src="createURL(post.author.avatar, 300, 300)"
             class="rounded-full mr-4 w-12 h-12"
           />
           <div>
             <p class="text-white mr-4">{{ post.author.full_name }}</p>
-            <p class="text-gray-500 text-sm">{{ FormatDate(post._createdAt) }}</p>
+            <p class="text-gray-500 text-sm">{{ formatDate(post._createdAt) }}</p>
           </div>
         </div>
 
@@ -42,7 +42,7 @@
 </template>
 
 <script lang="ts" setup>
-import { CreateURL, FormatDate } from '../utils'
+import { createURL, formatDate } from '../utils'
 
 defineProps({
   post: {
