@@ -2,10 +2,10 @@
   <img
     src="https://cdn.pixabay.com/photo/2024/03/08/09/55/cat-8620369_1280.png"
     alt="Banner hygge cat!"
-    class="banner w-full object-cover"
+    class="app-banner w-full object-cover"
   />
 
-  <section class="p-8 text-center bg-gray-900 text-gray-300">
+  <section class="p-8 text-center">
     <h2 class="text-2xl font-bold mb-4">Welcome to Whisker Weekly!</h2>
     <p class="text-justify mb-4">
       Welcome to Purrfect Headlines! At Purrfect Headlines, we are dedicated to bringing you the
@@ -46,7 +46,7 @@
 
   <!-- Two Columns Section -->
   <section class="grid grid-cols-1 md:grid-cols-2">
-    <div class="p-8 bg-gray-900 text-gray-300">
+    <div class="p-8">
       <h2 class="text-2xl font-bold text-justify mb-4">About Us</h2>
       <p class="mb-4">
         The cat (Felis catus), also referred to as domestic cat or house cat, is a small
@@ -91,9 +91,3 @@
 </template>
 
 <script setup lang="ts"></script>
-
-<style scoped>
-.banner {
-  height: 600px;
-}
-</style>

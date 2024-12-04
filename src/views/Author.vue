@@ -1,21 +1,23 @@
 <template>
-  <main class="post-page">
-    <section v-if="author" class="container mx-auto p-4">
-      <div class="flex items-center mb-4">
-        <img :src="CreateURL(author.avatar)" class="inline-block rounded-full w-16 h-16 mr-4" />
+  <section v-if="author" class="container mx-auto p-4 pt-32">
+    <div class="flex items-center mb-4">
+      <img
+        :src="CreateURL(author.avatar)"
+        alt="authors-image"
+        class="inline-block rounded-full w-16 h-16 mr-4"
+      />
 
-        <h1 class="text-gray-500 text-2xl uppercase font-bold">
-          {{ author.full_name }}
-        </h1>
-      </div>
+      <h1 class="text-gray-500 text-2xl uppercase font-bold">
+        {{ author.full_name }}
+      </h1>
+    </div>
 
-      <p class="text-gray-500 mb-8">{{ author.short_bio }}</p>
+    <p class="text-gray-500 mb-8">{{ author.short_bio }}</p>
 
-      <div class="grid gap-4" v-if="author.posts">
-        <PostCard v-for="(post, i) in author.posts" :key="i" :post="post" />
-      </div>
-    </section>
-  </main>
+    <div class="grid gap-4" v-if="author.posts">
+      <PostCard v-for="(post, i) in author.posts" :key="i" :post="post" />
+    </div>
+  </section>
 </template>
 
 <script lang="ts" setup>

@@ -1,6 +1,6 @@
 <template>
-  <section class="container mx-auto p-4">
-    <h1 class="text-2xl mb-8">Latest posts</h1>
+  <section class="container mx-auto p-4 pt-32">
+    <h1 class="text-4xl mb-8">Latest posts</h1>
 
     <div class="grid gap-4">
       <PostCard v-for="(post, i) in store.sortedPosts" :key="i" :post="post" />

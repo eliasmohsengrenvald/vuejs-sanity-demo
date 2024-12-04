@@ -2,7 +2,8 @@ import sanity from './sanity-client'
 import imageUrlBuilder from '@sanity/image-url'
 const builder = imageUrlBuilder(sanity)
 
-export const CreateURL = (source: string, width = 300, height = 300) => {
+export const CreateURL = (source: string, width?: number, height?: number) => {
+  if (!width || !height) return builder.image(source).url()
   return builder.image(source).width(width).height(height).url()
 }
 

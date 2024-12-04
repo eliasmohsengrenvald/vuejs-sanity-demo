@@ -1,13 +1,11 @@
 <template>
-  <main class="authors-page">
-    <section class="container mx-auto p-4">
-      <h1 class="text-2xl mb-8">Authors</h1>
+  <section class="container mx-auto p-4 pt-32">
+    <h1 class="text-4xl mb-8">Authors</h1>
 
-      <div class="grid md:grid-cols-3 gap-4">
-        <AuthorCard v-for="(author, i) in authors" :key="i" :author="author" />
-      </div>
-    </section>
-  </main>
+    <div class="grid md:grid-cols-3 gap-4">
+      <AuthorCard v-for="(author, i) in authors" :key="i" :author="author" />
+    </div>
+  </section>
 </template>
 
 <script lang="ts" setup>
