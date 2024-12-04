@@ -2,6 +2,10 @@
 
 This demo should get you started with Vue.js 3, Sanity headless CMS & TypeScript
 
+## Demo link
+
+https://vuejs-sanity-demo-azuxbvxsk-eliasmohsengrenvalds-projects.vercel.app/#/
+
 ## Recommended IDE Setup
 
 [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
