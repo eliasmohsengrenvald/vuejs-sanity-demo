@@ -1,6 +1,6 @@
-# demo
+# Demo Vue.js 3, Sanity headless CMS & Typescript
 
-This template should help get you started developing with Vue 3 in Vite.
+This demo should get you started with Vue.js 3, Sanity headless CMS & TypeScript
 
 ## Recommended IDE Setup
 
@@ -24,6 +24,12 @@ npm install
 
 ```sh
 npm run dev
+```
+
+### Run Sanity Client
+
+```sh
+cd sanity-studio && npm run dev
 ```
 
 ### Type-Check, Compile and Minify for Production
