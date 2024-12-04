@@ -1,5 +1,5 @@
 <template>
-  <section v-if="author" class="container mx-auto p-4 pt-32">
+  <section :data-cy="author.full_name" v-if="author" class="container mx-auto p-4 pt-32">
     <div class="flex items-center mb-4">
       <img
         :src="createURL(author.avatar)"

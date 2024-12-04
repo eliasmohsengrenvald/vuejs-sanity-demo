@@ -1,5 +1,8 @@
 <template>
-  <div class="bg-gray-800 rounded-lg p-4 text-center flex flex-col justify-between h-full">
+  <div
+    :data-cy="author.full_name"
+    class="bg-gray-800 rounded-lg p-4 text-center flex flex-col justify-between h-full"
+  >
     <div>
       <img
         :src="createURL(author.avatar, 300, 300)"
@@ -10,7 +13,13 @@
         {{ author.short_bio }}
       </p>
     </div>
-    <router-link :to="`/author/${author._id}`" class="btn mt-auto">Profile</router-link>
+    <router-link
+      :data-cy="`${author.full_name}-readmore`"
+      data
+      :to="`/author/${author._id}`"
+      class="btn mt-auto"
+      >Profile</router-link
+    >
   </div>
 </template>
 
