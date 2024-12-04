@@ -1,4 +1,7 @@
 import { createClient, SanityClient } from '@sanity/client'
+
+console.log('sss', process.env.VITE_SANITY_PROJECT_ID)
+
 export const sanityClient: SanityClient = createClient({
   projectId: import.meta.env.PROD
     ? process.env.VITE_SANITY_PROJECT_ID
