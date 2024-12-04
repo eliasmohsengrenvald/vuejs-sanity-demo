@@ -4,11 +4,17 @@ import sanity from '../sanity-client'
 interface IPost {
   _id: string
   _createdAt: string
+  excerpt: string
+  content: string
   author: IAuthor
 }
 
 interface IAuthor {
   name: string
+  avatar: string
+  full_name: string
+  short_bio: string
+  posts: IPost[]
 }
 
 interface ICmsState {
