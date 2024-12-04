@@ -4,7 +4,7 @@
       <h1>Whisker Weekly</h1>
       <ul class="flex space-x-4">
         <li>
-          <router-link :to="`/`" class="hover:underline" aria-current="page">Home</router-link>
+          <router-link :to="`/`" class="hover:underline">Home</router-link>
         </li>
         <li>
           <router-link :to="`/news`" class="hover:underline">News</router-link>
@@ -20,5 +20,5 @@
     <RouterView></RouterView>
   </main>
 
-  <footer class="bg-gray-800 text-white text-center p-4">Made with ❤️</footer>
+  <footer class="bg-gray-800 text-white text-center p-4">Made by Elias with ❤️</footer>
 </template>
