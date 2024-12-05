@@ -106,5 +106,3 @@ const images = [
 const store = useCmsStore()
 store.fetchPosts(3)
 </script>
-
-<style scoped></style>
