@@ -18,7 +18,7 @@
 
   <main class="pt-10 flex-grow overflow-y-auto">
     <RouterView></RouterView>
-  </main>
 
-  <footer class="bg-gray-800 text-white text-center p-4">Made by Elias with ❤️</footer>
+    <footer class="bg-gray-800 text-white text-center p-4">Made by Elias with ❤️</footer>
+  </main>
 </template>
