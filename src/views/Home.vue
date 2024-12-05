@@ -1,10 +1,5 @@
 <template>
-  <img
-    src="https://cdn.pixabay.com/photo/2024/03/08/09/55/cat-8620369_1280.png"
-    alt="Banner hygge cat!"
-    class="app-banner w-full object-cover"
-  />
-
+  <Carousel :images="images"></Carousel>
   <section class="p-8 text-center">
     <h2 class="text-2xl font-bold mb-4">Welcome to Whisker Weekly!</h2>
     <p class="text-justify mb-4">
@@ -91,7 +86,25 @@
 <script lang="ts" setup>
 import { useCmsStore } from '../stores/cms'
 import PostCard from '../components/PostCard.vue'
+import Carousel from '../components/Carousel.vue'
+
+const images = [
+  {
+    src: 'https://images.pexels.com/photos/13788335/pexels-photo-13788335.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    alt: 'Banner - cat sitting on a wall',
+  },
+  {
+    src: 'https://images.pexels.com/photos/20787/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    alt: 'Banner - cat looking at the camera',
+  },
+  {
+    src: 'https://cdn.pixabay.com/photo/2024/03/08/09/55/cat-8620369_1280.png',
+    alt: 'Banner - cat lying on a bed',
+  },
+]
 
 const store = useCmsStore()
 store.fetchPosts(3)
 </script>
+
+<style scoped></style>
