@@ -9,7 +9,7 @@
         class="inline-block rounded-full w-32 h-32 mb-4"
       />
       <h3 class="text-xl font-bold mb-4">{{ author.full_name }}</h3>
-      <p class="text-gray-400 mb-4 text-justify overflow-auto">
+      <p class="text-gray-400 mb-4 text-justify overflow-auto truncate">
         {{ author.short_bio }}
       </p>
     </div>
