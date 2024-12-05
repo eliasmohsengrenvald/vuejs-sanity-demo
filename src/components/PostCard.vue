@@ -1,6 +1,14 @@
 <template>
   <div
-    :class="['bg-gray-800', 'rounded-lg', 'p-4', 'flex', 'flex-col', { 'sm:flex-row': !isCompact }]"
+    :class="[
+      'bg-gray-800',
+      ' hover:bg-gray-700',
+      'rounded-lg',
+      'p-4',
+      'flex',
+      'flex-col',
+      { 'sm:flex-row': !isCompact },
+    ]"
   >
     <img
       v-if="post.image"
@@ -35,7 +43,7 @@
           </div>
         </div>
 
-        <router-link :to="`/post/${post._id}`" class="btn">Read more</router-link>
+        <router-link :to="`/post/${post._id}`" class="btn hover:underline">Read more</router-link>
       </div>
     </div>
   </div>

@@ -1,7 +1,7 @@
 <template>
   <div
     :data-cy="author.full_name"
-    class="bg-gray-800 rounded-lg p-4 text-center flex flex-col justify-between h-full"
+    class="bg-gray-800 hover:bg-gray-700 rounded-lg p-4 text-center flex flex-col justify-between h-full"
   >
     <div>
       <img
@@ -17,7 +17,7 @@
       :data-cy="`${author.full_name}-readmore`"
       data
       :to="`/author/${author._id}`"
-      class="btn mt-auto"
+      class="btn mt-auto hover:underline"
       >Profile</router-link
     >
   </div>
